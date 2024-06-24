@@ -11,7 +11,10 @@ jobs:
         with:
           python-version: "3.9"
       - name: Install Sphinx
-        run: pip install sphinx
+        run: |
+          pip install sphinx
+          pip install myst-parser
+          pip install sphinx-rtd-theme
       - name: Build
         run: |
           sphinx-apidoc ./docs/_source -o ./docs/_source
