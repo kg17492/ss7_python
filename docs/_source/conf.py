@@ -24,6 +24,7 @@ extensions: list[str] = [
     'sphinx.ext.todo',
     'sphinx.ext.napoleon',
     'sphinx_rtd_theme',
+    "sphinx.ext.githubpages",
 ]
 
 myst_enable_extensions: list[str] = [
