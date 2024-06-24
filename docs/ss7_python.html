@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ss7_python package &mdash; SS7 Op.Python実行マニュアル 1.0 ドキュメント</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/mytheme.css?v=dd0aba51" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=6bbe880f"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/translations.js?v=4dbe4bdc"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="ss7_python" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SS7 Op.Python実行マニュアル
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ss7_python</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ss7_python package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ss7_python.Ss7Python">ss7_python.Ss7Python module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.CreateDataCsv"><code class="docutils literal notranslate"><span class="pre">CreateDataCsv()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.End"><code class="docutils literal notranslate"><span class="pre">End()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoFloor"><code class="docutils literal notranslate"><span class="pre">GetInfoFloor()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoKozoRC"><code class="docutils literal notranslate"><span class="pre">GetInfoKozoRC()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoKozoS"><code class="docutils literal notranslate"><span class="pre">GetInfoKozoS()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoKozoSRC"><code class="docutils literal notranslate"><span class="pre">GetInfoKozoSRC()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoSpanX"><code class="docutils literal notranslate"><span class="pre">GetInfoSpanX()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoSpanY"><code class="docutils literal notranslate"><span class="pre">GetInfoSpanY()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetInfoVersion"><code class="docutils literal notranslate"><span class="pre">GetInfoVersion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.GetLastError"><code class="docutils literal notranslate"><span class="pre">GetLastError()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.Init"><code class="docutils literal notranslate"><span class="pre">Init()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.LinkSS3"><code class="docutils literal notranslate"><span class="pre">LinkSS3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.Open"><code class="docutils literal notranslate"><span class="pre">Open()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.Ss7Python.Start"><code class="docutils literal notranslate"><span class="pre">Start()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ss7_python">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.SS7_Python"><code class="docutils literal notranslate"><span class="pre">SS7_Python</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ss7_python.raise_error"><code class="docutils literal notranslate"><span class="pre">raise_error()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SS7 Op.Python実行マニュアル</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">ss7_python</a></li>
+      <li class="breadcrumb-item active">ss7_python package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ss7_python.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ss7-python-package">
+<h1>ss7_python package<a class="headerlink" href="#ss7-python-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-ss7_python.Ss7Python">
+<span id="ss7-python-ss7python-module"></span><h2>ss7_python.Ss7Python module<a class="headerlink" href="#module-ss7_python.Ss7Python" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.CreateDataCsv">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">CreateDataCsv</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.CreateDataCsv" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.End">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">End</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.End" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoFloor">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoFloor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoFloor" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoKozoRC">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoKozoRC</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoKozoRC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoKozoS">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoKozoS</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoKozoS" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoKozoSRC">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoKozoSRC</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoKozoSRC" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoSpanX">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoSpanX</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoSpanX" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoSpanY">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoSpanY</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoSpanY" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetInfoVersion">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetInfoVersion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetInfoVersion" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.GetLastError">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">GetLastError</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.GetLastError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.Init">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">Init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.Init" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.LinkSS3">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">LinkSS3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.LinkSS3" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.Open">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">Open</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.Open" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.Ss7Python.Start">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.Ss7Python.</span></span><span class="sig-name descname"><span class="pre">Start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ss7_python.Ss7Python.Start" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-ss7_python">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ss7_python" title="Link to this heading"></a></h2>
+<p>SS7 Op.Python実行を使いやすくするためのモジュール</p>
+<dl class="simple">
+<dt>To do:</dt><dd><ul class="simple">
+<li><p>SS7 1.1.1.19以降をインストールする</p></li>
+<li><p>SS7 Op.Python実行のライセンスを取得する</p></li>
+<li><p>Microsoft版でない公式版Python3.9で実行する</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ss7_python.</span></span><span class="sig-name descname"><span class="pre">SS7_Python</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python" title="Link to this definition"></a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>SS7 Op.Python実行を使いやすくするためのクラス</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Attributes:</dt><dd><p>data: 読み込んだ物件データ
+cwd: Current Working Directory. Ss7Pythonモジュールがワーキングディレクトリを移動するため、相対パスでのパス指定を実現するために必要</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>解析実行、CSV出力などが出来る。
+各関数はエラーでTrueを返す。</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.calculate"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.calculate" title="Link to this definition"></a></dt>
+<dd><p>&lt;result&gt;で指定した結果に、&lt;calculation&gt;で指定した解析を実行して保存する</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>-</em>) -- <ul>
+<li><p>結果1</p></li>
+<li><p>結果2</p></li>
+<li><p>結果3</p></li>
+<li><p>結果4</p></li>
+<li><p>結果5</p></li>
+</ul>
+</p></li>
+<li><p><strong>calculation</strong> (<em>-</em>) -- <ul>
+<li><p>準備計算</p></li>
+<li><p>応力解析(一次)</p></li>
+<li><p>偏心率・剛性率</p></li>
+<li><p>基礎による応力</p></li>
+<li><p>断面算定</p></li>
+<li><p>耐力計算</p></li>
+<li><p>応力解析(二次)</p></li>
+<li><p>必要保有水平耐力</p></li>
+<li><p>積算</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.create_document">
+<span class="sig-name descname"><span class="pre">create_document</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.create_document"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.create_document" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.cwd">
+<span class="sig-name descname"><span class="pre">cwd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C:\\Users\\kg17492\\Dropbox</span> <span class="pre">(Kumagaigumi)\\設計本部_06_構造設計部\\01_共通資料・保存資料\\070K_Python'</span></em><a class="headerlink" href="#ss7_python.SS7_Python.cwd" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Ss7Data</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#ss7_python.SS7_Python.data" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.delete_result">
+<span class="sig-name descname"><span class="pre">delete_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.delete_result"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.delete_result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.export_cad7">
+<span class="sig-name descname"><span class="pre">export_cad7</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.export_cad7"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.export_cad7" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.export_input_csv">
+<span class="sig-name descname"><span class="pre">export_input_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.export_input_csv"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.export_input_csv" title="Link to this definition"></a></dt>
+<dd><p>&lt;result&gt;で指定した結果の入力データを、&lt;relative_path&gt;に保存する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>-</em>) -- <ul>
+<li><p>結果1</p></li>
+<li><p>結果2</p></li>
+<li><p>結果3</p></li>
+<li><p>結果4</p></li>
+<li><p>結果5</p></li>
+</ul>
+</p></li>
+<li><p><strong>保存するファイルの相対パス</strong> (<em>- relative_path</em>) -- </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.export_result_csv">
+<span class="sig-name descname"><span class="pre">export_result_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.export_result_csv"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.export_result_csv" title="Link to this definition"></a></dt>
+<dd><p>&lt;result&gt;で指定した結果を、&lt;relative_path&gt;に保存する。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>result</strong> (<em>-</em>) -- <ul>
+<li><p>結果1</p></li>
+<li><p>結果2</p></li>
+<li><p>結果3</p></li>
+<li><p>結果4</p></li>
+<li><p>結果5</p></li>
+</ul>
+</p></li>
+<li><p><strong>relative_path</strong> (<em>-</em>) -- 保存するファイルの相対パス</p></li>
+<li><p><strong>outputs</strong> (<em>-</em>) -- 出力項目名</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.isError">
+<span class="sig-name descname"><span class="pre">isError</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.isError"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.isError" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.restore">
+<span class="sig-name descname"><span class="pre">restore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.restore"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.restore" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.save"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.save" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="ss7_python.raise_error">
+<span class="sig-prename descclassname"><span class="pre">ss7_python.</span></span><span class="sig-name descname"><span class="pre">raise_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Callable</span></span></span><a class="reference internal" href="_modules/ss7_python.html#raise_error"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.raise_error" title="Link to this definition"></a></dt>
+<dd><p>都度エラーを確認するためのデコレータ</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="ss7_python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, KG17492.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

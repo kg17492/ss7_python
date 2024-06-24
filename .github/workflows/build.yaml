@@ -1,0 +1,18 @@
+name: Build Sphinx Documentation
+on:
+  push:
+jobs:
+  build-sphinx:
+    name: Build Sphinx Documentation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+      - name: Install Sphinx
+        run: pip install sphinx
+      - name: Build
+        run: |
+          sphinx-apidoc ./docs/_source -o ./docs/_source
+          sphinx-build ./docs/_source ./docs/
