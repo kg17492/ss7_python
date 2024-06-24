@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ss7_python &mdash; SS7 Op.Python実行マニュアル 1.0 ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=dd0aba51" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -16,7 +16,7 @@
         <script src="../_static/jquery.js?v=5d32c60e"></script>
         <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../_static/documentation_options.js?v=6bbe880f"></script>
-        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../_static/translations.js?v=4dbe4bdc"></script>
     <script src="../_static/js/theme.js"></script>
@@ -129,18 +129,24 @@
 <span class="sd">                - 読み込む物件のディレクトリ「????.ikn」の相対パス</span>
 <span class="sd">                - `.csv`の場合、csvファイルを読み取ってSS7ファイルを生成する。</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">absolute_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">relative_path</span><span class="p">)</span>
+        <span class="n">abs_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">absolute_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">)</span>
         <span class="n">Ss7Python</span><span class="o">.</span><span class="n">Init</span><span class="p">()</span>
         <span class="n">Ss7Python</span><span class="o">.</span><span class="n">Start</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isError</span><span class="p">():</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span>
         <span class="k">elif</span> <span class="n">relative_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.ikn&quot;</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Ss7Python</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">absolute_path</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Ss7Python</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">abs_path</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">isError</span><span class="p">()</span>
         <span class="k">elif</span> <span class="n">relative_path</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">):</span>
-            <span class="n">absolute_path</span> <span class="o">=</span> <span class="n">Ss7Python</span><span class="o">.</span><span class="n">CreateDataCsv</span><span class="p">(</span><span class="n">absolute_path</span><span class="p">,</span> <span class="n">absolute_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;.ikn&quot;</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Ss7Python</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">absolute_path</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">abs_path</span> <span class="o">=</span> <span class="n">Ss7Python</span><span class="o">.</span><span class="n">CreateDataCsv</span><span class="p">(</span><span class="n">abs_path</span><span class="p">,</span> <span class="n">abs_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;.csv&quot;</span><span class="p">,</span> <span class="s2">&quot;.ikn&quot;</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">Ss7Python</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">abs_path</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">isError</span><span class="p">()</span>
+
+<div class="viewcode-block" id="SS7_Python.absolute_path">
+<a class="viewcode-back" href="../ss7_python.html#ss7_python.SS7_Python.absolute_path">[ドキュメント]</a>
+    <span class="k">def</span> <span class="nf">absolute_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">))</span></div>
+
 
 <div class="viewcode-block" id="SS7_Python.isError">
 <a class="viewcode-back" href="../ss7_python.html#ss7_python.SS7_Python.isError">[ドキュメント]</a>
@@ -205,8 +211,7 @@
 <a class="viewcode-back" href="../ss7_python.html#ss7_python.SS7_Python.create_document">[ドキュメント]</a>
     <span class="nd">@raise_error</span>
     <span class="k">def</span> <span class="nf">create_document</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">absolute_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">CreateDocument</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">absolute_path</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">CreateDocument</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">absolute_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="SS7_Python.export_input_csv">
@@ -224,8 +229,7 @@
 <span class="sd">                - 結果5</span>
 <span class="sd">            - relative_path 保存するファイルの相対パス</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">absolute_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ExportInputCsv</span><span class="p">(</span><span class="n">absolute_path</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ExportInputCsv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">absolute_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="SS7_Python.export_result_csv">
@@ -244,23 +248,21 @@
 <span class="sd">            - relative_path: 保存するファイルの相対パス</span>
 <span class="sd">            - outputs: 出力項目名</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">absolute_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ExportResultCsv</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">absolute_path</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ExportResultCsv</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">absolute_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="SS7_Python.export_cad7">
 <a class="viewcode-back" href="../ss7_python.html#ss7_python.SS7_Python.export_cad7">[ドキュメント]</a>
     <span class="nd">@raise_error</span>
     <span class="k">def</span> <span class="nf">export_cad7</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">absolute_path</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cwd</span><span class="p">,</span> <span class="n">relative_path</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ExportCad7</span><span class="p">(</span><span class="n">absolute_path</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">GetResultData</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="n">ExportCad7</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">absolute_path</span><span class="p">(</span><span class="n">relative_path</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span></div>
 
 
     <span class="k">def</span> <span class="fm">__del__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Close</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">Ss7Python</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span></div>
+            <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">Close</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">Ss7Python</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span></div>
 
 </pre></div>
 

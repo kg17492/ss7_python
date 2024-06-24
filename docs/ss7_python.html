@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ss7_python package &mdash; SS7 Op.Python実行マニュアル 1.0 ドキュメント</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/mytheme.css?v=dd0aba51" />
+      <link rel="stylesheet" type="text/css" href="_static/css/mytheme.css" />
 
   
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -17,7 +17,7 @@
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="_static/documentation_options.js?v=6bbe880f"></script>
-        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="_static/translations.js?v=4dbe4bdc"></script>
     <script src="_static/js/theme.js"></script>
@@ -207,6 +207,11 @@ cwd: Current Working Directory. Ss7Pythonモジュールがワーキングディ
 <p>解析実行、CSV出力などが出来る。
 各関数はエラーでTrueを返す。</p>
 <dl class="py method">
+<dt class="sig sig-object py" id="ss7_python.SS7_Python.absolute_path">
+<span class="sig-name descname"><span class="pre">absolute_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.absolute_path"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.absolute_path" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="ss7_python.SS7_Python.calculate">
 <span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calculation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/ss7_python.html#SS7_Python.calculate"><span class="viewcode-link"><span class="pre">[ソース]</span></span></a><a class="headerlink" href="#ss7_python.SS7_Python.calculate" title="Link to this definition"></a></dt>
 <dd><p>&lt;result&gt;で指定した結果に、&lt;calculation&gt;で指定した解析を実行して保存する</p>
@@ -245,7 +250,7 @@ cwd: Current Working Directory. Ss7Pythonモジュールがワーキングディ
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="ss7_python.SS7_Python.cwd">
-<span class="sig-name descname"><span class="pre">cwd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C:\\Users\\kg17492\\Dropbox</span> <span class="pre">(Kumagaigumi)\\設計本部_06_構造設計部\\01_共通資料・保存資料\\070K_Python'</span></em><a class="headerlink" href="#ss7_python.SS7_Python.cwd" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">cwd</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'C:\\Users\\kg17492\\Dropbox</span> <span class="pre">(Kumagaigumi)\\設計本部_06_構造設計部\\01_共通資料・保存資料\\070K_Python\\ライブラリ\\ss7_python'</span></em><a class="headerlink" href="#ss7_python.SS7_Python.cwd" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
@@ -278,7 +283,7 @@ cwd: Current Working Directory. Ss7Pythonモジュールがワーキングディ
 <li><p>結果5</p></li>
 </ul>
 </p></li>
-<li><p><strong>保存するファイルの相対パス</strong> (<em>- relative_path</em>) -- </p></li>
+<li><p><strong>保存するファイルの相対パス</strong> (<em>- relative_path</em>)</p></li>
 </ul>
 </dd>
 </dl>
