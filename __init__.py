@@ -6,7 +6,7 @@ To do:
     * Microsoft版でない公式版Python3.9で実行する
 """
 
-import os
+from pathlib import Path
 from . import Ss7Python
 from typing import Callable
 from functools import wraps
@@ -36,7 +36,7 @@ class SS7_Python:
     各関数はエラーでTrueを返す。
     """
     data: Ss7Python.Ss7Data = None
-    cwd: str = os.getcwd()
+    cwd: Path = Path(".")
 
     def __init__(
         self,
@@ -63,7 +63,7 @@ class SS7_Python:
             self.isError()
 
     def absolute_path(self, relative_path: str) -> str:
-        return os.path.realpath(os.path.join(self.cwd, relative_path))
+        return self.cwd.joinpath(relative_path).resolve()
 
     def isError(self) -> bool:
         err: Ss7Python.Ss7ErrInfo = Ss7Python.GetLastError()
